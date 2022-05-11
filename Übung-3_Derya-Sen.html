@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Derya Sen">
+    <meta name="description" content="Website to show location and Points-of-Interest">
+    <link rel="stylesheet" href="Übung-3_Derya-Sen.css">
+
+</head>
+
+<body>
+    <h1>Exercise 3 - Web APIs and object oriented programing</h1>
+    <h2>On this website you can request the next bus station in Münster regarding your position</h2>
+
+    <p>In the following it is possible to transfer a location in GeoJSON format <br>
+        and send it off or to use the button below to query your own location</p>
+
+
+    <p>Enter your location</p>
+    <input type="text" name="Standort" id="standort">
+    <button id="koordinaten">send location</button>
+
+    <br>
+
+    <p>Click on the button to get your location</p>
+    <button onclick="getLocation()">get location</button>
+    <p id="location"></p>
+
+    <br>
+
+    <div id="demo">
+        <h2>Request bus stop stations near your position</h2>
+        <button type="button" onclick="loadDoc()">next bus stop</button>
+    </div>
+
+
+    <p>The following table shows all bus stop stations in Münster with their name, coordinate <br>
+        and distance to your position.
+    </p>
+
+    <table id="mytable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coordinates</th>
+                <th>Distance to location (in km)</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+</body>
+<script src="Übung-3_Derya-Sen.js"></script>
+<script src="Übung-3_Derya-Sen_P2.js"></script>
+
+</html>
